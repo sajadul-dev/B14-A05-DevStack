@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnologyGrid from "./components/TechnologyGrid";
 import StackSidebar from "./components/StackSidebar";
+import Footer from "./components/Footer";
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
@@ -121,7 +122,7 @@ function App() {
           </div>
         </section>
       </main>
-
+     <Footer />
       <ToastContainer
         position="top-right"
         autoClose={2500}
