@@ -77,7 +77,7 @@ function App() {
 
         <section
           id="technologies"
-          className="bg-white px-5 py-14 sm:px-8 lg:px-10 lg:py-16"
+          className="scroll-mt-[72px] bg-white px-5 py-14 sm:px-8 lg:px-10 lg:py-16"
         >
           <div className="mx-auto max-w-[1290px]">
             {/* Section heading */}

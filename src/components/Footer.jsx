@@ -1,3 +1,4 @@
+import logo from "../assets/logo-text.png";
 function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white">
@@ -5,12 +6,11 @@ function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.7fr_0.8fr_0.8fr_0.8fr]">
           {/* Brand */}
           <div className="max-w-sm">
-            <h2 className="text-lg font-bold text-slate-900">
-              <span className="text-slate-900">Dev</span>
-              <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">
-                Stack
-              </span>
-            </h2>
+        <img
+  src={logo}
+  alt="Dev Stack"
+  className="w-[128px] object-contain"
+/>
 
             <p className="mt-3 text-sm leading-6 text-slate-400">
               Curated tools, technologies, and resources for developers
