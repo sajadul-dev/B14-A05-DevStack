@@ -81,7 +81,7 @@ function App() {
         >
           <div className="mx-auto max-w-[1290px]">
             {/* Section heading */}
-            <div className="mb-7">
+           <div className="mb-7 text-center sm:text-left">
               <h2 className="text-3xl font-extrabold leading-[1.1] tracking-tight text-[#0a0f1d] sm:text-4xl">
                 Explore the{" "}
                 <span className="bg-[image:var(--brand-gradient)] bg-clip-text text-transparent">

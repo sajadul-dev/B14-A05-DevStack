@@ -1,4 +1,4 @@
-function TechnologyCard({ technology }) {
+function TechnologyCard({ technology, isAdded, onAdd }) {
   const badgeStyles = {
     Popular: "bg-sky-50 text-sky-500 ring-sky-100",
     Versatile: "bg-emerald-50 text-emerald-500 ring-emerald-100",
@@ -18,7 +18,7 @@ function TechnologyCard({ technology }) {
     "bg-slate-50 text-slate-500 ring-slate-100";
 
   return (
-   <article className="flex min-h-[270px] flex-col rounded-xl border border-slate-200/80 bg-white p-4 shadow-[0_2px_10px_rgba(15,23,42,0.035)] transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+    <article className="flex min-h-[275px] flex-col rounded-xl border border-slate-200/80 bg-white p-4 shadow-[0_2px_10px_rgba(15,23,42,0.035)] transition-all duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
       {/* Icon + Badge */}
       <div className="flex items-start justify-between">
         <img
@@ -49,7 +49,7 @@ function TechnologyCard({ technology }) {
       {/* Divider */}
       <div className="mt-3 border-t border-slate-100" />
 
-      {/* Category / Difficulty / Rating */}
+      {/* Meta information */}
       <div className="mt-2.5 flex items-center justify-between gap-1.5">
         <span className="shrink-0 rounded bg-slate-50 px-2 py-1 text-[9px] font-medium leading-none text-slate-500">
           {technology.category}
@@ -68,11 +68,15 @@ function TechnologyCard({ technology }) {
       {/* Add button */}
       <button
         type="button"
-        className="mt-auto pt-3"
+        onClick={() => onAdd(technology)}
+        disabled={isAdded}
+        className={`mt-auto flex h-[30px] w-full items-center justify-center rounded-md px-3 text-[10px] font-medium transition-all duration-200 ${
+          isAdded
+            ? "cursor-not-allowed bg-slate-100 text-slate-400"
+            : "bg-[#0a0f1d] text-white hover:bg-[#151c2d]"
+        }`}
       >
-        <span className="flex h-[30px] w-full items-center justify-center rounded-md bg-[#0a0f1d] px-3 text-[10px] font-medium text-white transition-colors duration-200 hover:bg-[#151c2d]">
-          Add to Stack
-        </span>
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </article>
   );
