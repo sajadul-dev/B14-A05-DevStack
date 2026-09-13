@@ -19,7 +19,7 @@ function App() {
         const module = await import("./data/technologies.json");
 
         setTechnologies(module.default);
-      } catch (error) {
+      } catch {
         toast.error("Failed to load technologies.");
       } finally {
         setLoading(false);
