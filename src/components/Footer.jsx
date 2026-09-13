@@ -3,9 +3,9 @@ function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-[1290px] px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.7fr_0.8fr_0.8fr_0.8fr]">
+       <div className="grid gap-10 text-center md:grid-cols-2 md:text-left lg:grid-cols-[1.7fr_0.8fr_0.8fr_0.8fr]">
           {/* Brand */}
-          <div className="max-w-sm">
+         <div className="mx-auto max-w-sm md:mx-0">
         <img
   src={logo}
   alt="Dev Stack"
@@ -17,7 +17,7 @@ function Footer() {
               building modern software.
             </p>
 
-            <div className="mt-5 flex items-center gap-4">
+            <div className="mt-5 flex items-center justify-center gap-4 md:justify-start">
               <a
                 href="https://github.com"
                 target="_blank"
@@ -48,7 +48,7 @@ function Footer() {
           </div>
 
           {/* Product */}
-          <div>
+         <div className="hidden md:block">
             <h3 className="text-[11px] font-bold uppercase tracking-wide text-slate-800">
               Product
             </h3>
@@ -78,7 +78,7 @@ function Footer() {
           </div>
 
           {/* Company */}
-          <div>
+         <div className="hidden md:block">
             <h3 className="text-[11px] font-bold uppercase tracking-wide text-slate-800">
               Company
             </h3>
@@ -108,7 +108,7 @@ function Footer() {
           </div>
 
           {/* Legal */}
-          <div>
+         <div className="hidden md:block">
             <h3 className="text-[11px] font-bold uppercase tracking-wide text-slate-800">
               Legal
             </h3>
@@ -132,7 +132,7 @@ function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col gap-4 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+       <div className="mt-12 flex flex-col items-center gap-4 border-t border-slate-200 pt-6 text-center text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>© 2026 Dev Stack. All rights reserved.</p>
 
           <div className="flex items-center gap-5">
